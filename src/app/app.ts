@@ -1,15 +1,29 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatCardModule } from '@angular/material/card';
+import {DatepickerComponent} from './datepicker/datepicker';
 import { ButtonComponent } from './button/button';
 import { CardComponent } from './card/card';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet,
+
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatCardModule,
+    DatepickerComponent
     CardComponent,
     ButtonComponent
     ],
+
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
