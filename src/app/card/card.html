@@ -1,0 +1,43 @@
+
+
+<h1>  Card Component</h1>
+<div class="cards-container">
+  <mat-card *ngFor="let card of cards" class="card">
+    <mat-card-header>
+      <div mat-card-avatar class="avatar">{{card.avatar}}</div>
+      <div class="header-content">
+        <mat-card-title class="header-title">{{card.header}}</mat-card-title>
+        <mat-card-subtitle class="header-subtitle">{{card.subhead}}</mat-card-subtitle>
+      </div>
+        
+      
+    </mat-card-header>
+    
+    <div class="card-image">
+      <!-- Placeholder for card image/icons -->
+      <div class="image-placeholder">
+        <div class="icon-group">
+          <mat-icon class="large-icon">Desire AI</mat-icon>
+          <div class="bottom-icons">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <mat-card-content>
+      <div class="content-header">
+        <h3 class="content-title">{{card.title}}</h3>
+        <p class="content-subtitle">{{card.subtitle}}</p>
+      </div>
+      <p class="content-text">{{card.content}}</p>
+    </mat-card-content>
+    
+    <mat-card-actions class="card-actions">
+      <button mat-stroked-button class="outline-button">Label</button>
+      <button mat-raised-button class="filled-button">
+        Label
+        
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
