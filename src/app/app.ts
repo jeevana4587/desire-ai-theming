@@ -19,7 +19,7 @@ import { CardComponent } from './card/card';
     MatFormFieldModule,
     MatInputModule,
     MatCardModule,
-    DatepickerComponent
+    DatepickerComponent,
     CardComponent,
     ButtonComponent
     ],
