@@ -1,0 +1,122 @@
+@use 'sass:map';
+@use '_theme-colors' as custom-theme;
+
+$orange: map.get(custom-theme.$primary-palette, 60);
+$white: map.get(custom-theme.$primary-palette, 100);
+$brown: #4b3a34;
+
+.left-nav {
+  position: fixed;                // fixed for true fixed position
+  top: 40px;                     // aligned below header height
+  left: 0;                       // fixed to left edge
+  width: 80px;                   // fixed sidebar width
+  height: calc(100vh - 40px);    // fill viewport height minus header
+  max-height: calc(100vh - 40px);
+  background: #ececec;
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  z-index: 1100;                 // to layer above content but below header if needed
+
+  .nav-items {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    align-items: center;
+    width: 100%;
+    flex-shrink: 0;
+  }
+
+  .nav-btn {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    width: 64px;
+    padding: 0;
+    min-width: 0;
+    line-height: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    text-transform: none;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background: transparent;
+      outline: none;
+      box-shadow: none;
+    }
+
+    .label {
+      font-size: 12px;
+      color: $brown;
+      text-align: center;
+      background: none;
+      margin: 0;
+      user-select: none;
+    }
+
+    .icon-wrap {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &.new-campaign {
+      .icon-wrap {
+        width: 50px;
+        height: 30px;
+        border-radius: 50% / 100%;
+        background: $orange;
+        color: $white;
+        margin-bottom: 2px;
+       
+
+        mat-icon {
+          font-size: 20px;
+          line-height: 1;
+        }
+      }
+    }
+
+    &.dashboard {
+      .rect-icon {
+        width: 24px;
+        height: 18px;
+        border: 2px solid $brown;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-bottom: 2px;
+      }
+    }
+  }
+
+  .nav-footer {
+  position: fixed;                 // Fix footer at bottom
+  left: 0;                        // Left aligned to sidebar start (left edge)
+  bottom: 0;                      // Stick to bottom of viewport
+  width: 80px;                    // Match sidebar width
+  height: 32px;                   // Same height as main footer
+  background: #ebe3f7;            // Match main footer background
+  color: #5f5565;                 // Match main footer text color
+  font-size: 12px;                // Same font size for consistency
+  display: flex;
+  align-items: center;
+  justify-content: center;        // Center text horizontally
+  padding-left: 0;                // Remove left padding to center text
+  z-index: 900;                   // Same stacking order as footer
+  box-sizing: border-box;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+  user-select: none;
+  }
+
+}

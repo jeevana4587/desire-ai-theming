@@ -1,0 +1,27 @@
+<header class="header-bar" role="banner">
+  <!-- Left logo -->
+  <div class="header-logo">
+    <mat-icon>auto_stories</mat-icon>
+  </div>
+
+  <!-- Center progress tracker -->
+  <div class="header-progress">
+    <div class="step" [class.active]="currentStep >= 1">01</div>
+    <div class="line1"></div>
+    <div class="step" [class.active]="currentStep >= 2">02</div>
+    <div class="line2"></div>
+    <div class="step" [class.active]="currentStep >= 3">03</div>
+    <div class="line3"></div>
+    <div class="step" [class.active]="currentStep >= 4">✓</div>
+  </div>
+
+  <!-- Right actions -->
+  <div class="header-actions">
+    <div mat-icon-action class="profile" aria-label="Profile">
+      <mat-icon>account_circle</mat-icon>
+    </div>
+    <div mat-icon-action class="help" aria-label="Help">
+      <mat-icon>help_outline</mat-icon>
+    </div>
+  </div>
+</header>

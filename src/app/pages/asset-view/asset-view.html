@@ -1,0 +1,17 @@
+<div class="asset-view-container">
+  <!-- Sub Header Tabs -->
+  <div class="sub-header">
+    <div class="tab" [class.active]="wizard.currentStep === 2">
+      Select Assets
+    </div>
+    <div class="tab" [class.active]="wizard.currentStep === 2.5">
+      Automation
+    </div>
+  </div>
+
+  <!-- Step Content -->
+  <div class="asset-body">
+    <app-select-asset *ngIf="wizard.currentStep === 2"></app-select-asset>
+    <app-automation *ngIf="wizard.currentStep >= 2.5"></app-automation>
+  </div>
+</div>

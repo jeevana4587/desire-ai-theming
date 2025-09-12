@@ -1,0 +1,30 @@
+<div class="select-asset-container">
+  <!-- Sticky Header -->
+  <div class="select-asset-header">
+    <!-- Left Section -->
+    <div class="left-section">
+      <span class="asset">Asset selection</span>
+      <span class="count">{{ selectedCount }}/{{ totalAssets }}</span>
+      <mat-slide-toggle class="select-toggle">Select all</mat-slide-toggle>
+    </div>
+
+    <!-- Right Section -->
+    <div class="right-section">
+      <div class="search-box">
+        <input type="text" [(ngModel)]="searchTerm" placeholder="Search" />
+        <!-- <button mat-icon-button>
+          <mat-icon>search</mat-icon>
+        </button> -->
+      </div>
+
+      <button mat-icon-button><mat-icon>filter_list</mat-icon></button>
+      <button mat-icon-button><mat-icon>view_list</mat-icon></button>
+      <button mat-icon-button><mat-icon>view_module</mat-icon></button>
+    </div>
+  </div>
+
+  <!-- Asset Grid -->
+  <div class="asset-grid">
+    <!-- TODO: asset cards -->
+  </div>
+</div>

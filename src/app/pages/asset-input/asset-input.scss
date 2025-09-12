@@ -1,0 +1,76 @@
+@use 'sass:map';
+@use '_theme-colors' as custom-theme;
+
+$soft-bg-pages: #ececefb9;
+.sub-header{
+    background-color: #fdf3ee;
+}
+.asset-input-container {
+  position: fixed;
+  top: 40px;      // below main header
+  left: 1032px;     // left-nav + campaign-input + asset-view
+  min-width: calc(100vw - 1033px);
+  bottom: 84px;   // above footer + main-cta
+  background: $soft-bg-pages;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.sub-header {
+  display: flex;
+  border-bottom: 1px solid rgba(0, 0, 0, .08);
+
+  .tab {
+    flex: 1;
+    padding: 12px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    text-align: center;
+
+    &.active {
+      color:  map.get(custom-theme.$primary-palette, 60);
+      border-bottom-color: map.get(custom-theme.$primary-palette, 60);
+    }
+  }
+}
+
+/* Asset Name - styled same as header */
+.asset-name {
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  background: map.get(custom-theme.$primary-palette, 100);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  color: #333;
+  text-align: left;
+  height: 15px;
+
+  .highlight {
+    color: map.get(custom-theme.$primary-palette, 50); // same highlight as active tab
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  height: 50px;
+  align-items: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);  
+  background: map.get(custom-theme.$primary-palette, 100);
+  button {
+    min-width: 100px;
+    display: flex;
+
+  }
+}
+
+.asset-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+}

@@ -1,0 +1,51 @@
+<div class="layout-container">
+
+  <!-- Header with Stepper -->
+  <app-header [currentStep]="wizard.currentStep"></app-header>
+
+  <div class="layout-body">
+    <!-- Left Navigation -->
+    <div class="layout-nav">
+      <app-left-nav></app-left-nav>
+    </div>
+    
+    <!-- Campaign Input View -->
+    <div class="layout-section" >
+      <app-campaign-input></app-campaign-input>
+    </div>
+
+
+    <!-- Asset View -->
+    <div class="layout-section" >
+      <app-asset-view></app-asset-view>
+    </div>
+
+    <!-- Asset Input -->
+    <div class="layout-section" >
+      <app-asset-input></app-asset-input>
+    </div>
+
+    <!-- Final Tick Step -->
+    <!-- <div class="layout-section tick-step" *ngIf="isStepActive(4)">
+      <div class="tick-container">
+        <mat-icon class="tick-icon">check_circle</mat-icon>
+        <h2>All steps completed!</h2>
+        <p>Your campaign and assets have been set up successfully.</p>
+      </div>
+    </div> -->
+  </div>
+
+  <!-- CTA Section (Back / Next) -->
+  <div class="layout-cta">
+    <app-main-cta 
+      (back)="back()" 
+      (next)="next()" 
+      [currentStep]="wizard.currentStep">
+    </app-main-cta>
+  </div>
+
+  <!-- Footer -->
+  <div class="layout-footer">
+    <app-footer></app-footer>
+  </div>
+</div>

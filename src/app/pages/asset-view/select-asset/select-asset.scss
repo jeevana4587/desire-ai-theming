@@ -1,0 +1,109 @@
+@use 'sass:map';
+@use '_theme-colors' as custom-theme;
+
+.select-asset-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.select-asset-header {
+  position: sticky;
+  margin-left: -16px;
+  margin-right: -16px;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px; //  gap between left and right section
+  padding: 6px 16px;
+  background: map.get(custom-theme.$primary-palette, 100);
+  border-bottom: 1px solid #f1e7de;
+  height: 27px;
+}
+
+/* Left side */
+.left-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  .asset {
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  .count {
+    font-size: 14px;
+    padding: 2px 6px;
+    border-radius: 6px;
+    background: map.get(custom-theme.$primary-palette, 90);
+    color: map.get(custom-theme.$primary-palette, 10);
+    font-weight: 600;
+  }
+
+  .select-toggle {
+    font-size: 12px; /* label font size */
+  }
+}
+
+
+/* Right side */
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  border-radius: 25px;
+  background: map.get(custom-theme.$primary-palette, 100);
+  height: 32px;
+  padding: 0 8px;
+  width: 160px;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.08);
+
+  input {
+    flex: 1;
+    font-size: 12px;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 0 4px;
+  }
+
+//   button[mat-icon-button] {
+//     width: 28px;
+//     height: 28px;
+//     color: map.get(custom-theme.$primary-palette, 50);
+//     border-radius: 50%;
+
+//     &:hover {
+//       background: map.get(custom-theme.$primary-palette, 70);
+//     }
+
+//     mat-icon {
+//       font-size: 18px;
+//     }
+//   }
+}
+
+button[mat-icon-button] {
+  color: map.get(custom-theme.$primary-palette, 50);
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background: map.get(custom-theme.$primary-palette, 70);
+  }
+
+  mat-icon {
+    font-size: 20px;
+  }
+}

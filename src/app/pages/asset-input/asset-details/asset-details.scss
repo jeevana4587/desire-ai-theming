@@ -1,0 +1,37 @@
+.asset-details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px 0;
+}
+
+.input-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+
+  .full-width {
+    flex: 1;
+  }
+
+  .field-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    button {
+      height: 32px;
+      width: 32px;
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 16px;
+
+  button {
+    min-width: 100px;
+  }
+}

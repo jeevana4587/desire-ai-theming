@@ -1,0 +1,21 @@
+<div class="data-source">
+
+  <!-- Radio options -->
+  <mat-radio-group [(ngModel)]="selectedSource" class="radio-group">
+    <mat-radio-button value="google">Google sheet</mat-radio-button>
+    <mat-radio-button value="attachment">Attachment</mat-radio-button>
+  </mat-radio-group>
+
+  <!-- Data source link -->
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Data source link</mat-label>
+    <input matInput placeholder="Paste link here" />
+  </mat-form-field>
+
+  <!-- Value -->
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Value</mat-label>
+    <input matInput placeholder="Enter value" />
+  </mat-form-field>
+
+</div>

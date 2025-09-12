@@ -1,0 +1,18 @@
+@use 'sass:map';
+@use '_theme-colors' as custom-theme;
+
+.data-source {
+  display: flex;
+  flex-direction: column;
+
+  .radio-group {
+    display: flex;
+    gap: 24px;
+    margin: 8px 0;
+  }
+
+  .full-width {
+    width: 100%;
+  }
+
+}

@@ -1,0 +1,58 @@
+@use 'sass:map';
+@use '_theme-colors' as custom-theme;
+
+.details-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+textarea {
+  width: 290px;
+  height: 105px;
+  background: map.get(custom-theme.$primary-palette, 100);
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  resize: none;
+  font-size: 14px;
+  color: #4b4b4b;
+  padding: 8px 10px;
+  margin: 0;
+  line-height: 1.4;
+  text-align: left;
+  vertical-align: top;
+  overflow-y: auto;
+
+  /* Custom scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: map.get(custom-theme.$primary-palette, 70) transparent;
+}
+
+.reference-row {
+  display: flex;
+  align-items: center;    // vertically centers icon and text
+  gap: 1px;
+  padding-left: 2px;
+  margin-top: 3px;
+  font-size: 18px;
+  font-weight: 500;
+  color: map.get(custom-theme.$primary-palette, 60);
+  
+  mat-icon {
+    font-size: 18px;
+    color: map.get(custom-theme.$primary-palette, 60);
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
+    vertical-align: middle;
+  }
+  
+  span {
+    line-height: 1;
+    vertical-align: middle;
+  }
+}

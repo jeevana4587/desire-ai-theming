@@ -1,0 +1,43 @@
+@use 'sass:map';
+@use '_theme-colors' as custom-theme;
+
+$soft-bg-pages: #ececefb9;
+.sub-header{
+    background-color: #fdf3ee;
+}
+.asset-view-container {
+  position: fixed;
+  top: 40px;      // below header
+  left: 431px;    // left-nav + campaign-view
+  width: 600px;     // width
+  bottom: 84px;   // above footer + main-cta
+  background: $soft-bg-pages;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.sub-header {
+  display: flex;
+  border-bottom: 1px solid rgba(0,0,0,.08);
+
+  .tab {
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    border-bottom: 3px solid transparent;
+    text-align: center;
+
+    &.active {
+      color: map.get(custom-theme.$primary-palette, 60);
+      border-bottom-color: map.get(custom-theme.$primary-palette, 60);
+    }
+  }
+}
+
+.asset-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0 16px 16px 16px;
+}

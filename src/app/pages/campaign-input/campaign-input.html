@@ -1,0 +1,18 @@
+<div class="campaign-input-container">
+  <!-- Sub Header Tabs -->
+  <div class="sub-header">
+    <div class="tab" [class.active]="wizard.currentStep === 1">
+      Campaign Details
+    </div>
+    <div class="tab" [class.active]="wizard.currentStep === 1.5">
+      Select Theme
+    </div>
+  </div>
+
+
+  <!-- Step Content -->
+  <div class="campaign-body">
+    <app-campaign-details *ngIf="wizard.currentStep === 1"></app-campaign-details>
+    <app-select-theme *ngIf="wizard.currentStep >= 1.5"></app-select-theme>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<div class="cta-container">
+  <div class="cta-actions">
+    <!-- Back Button -->
+    <button
+      mat-stroked-button
+      color="primary"
+      *ngIf="currentStep > 1"
+      (click)="goBack()">
+      <mat-icon>arrow_back</mat-icon>
+      Back
+    </button>
+
+    <!-- Next Button -->
+    <button
+      mat-stroked-button
+      color="primary"
+      (click)="goNext()"
+      [disabled]="canProceed">
+      Next
+      <mat-icon>arrow_forward</mat-icon>
+    </button>
+
+  </div>
+</div>

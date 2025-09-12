@@ -1,0 +1,33 @@
+<div class="automation-container">
+  <!-- Header -->
+  <div class="automation-header">
+
+    <!-- Right Section -->
+    <div class="right-section">
+      <div class="search-box">
+        <input type="text" [(ngModel)]="searchTerm" placeholder="Search" />
+        <!-- <button mat-icon-button>
+          <mat-icon>search</mat-icon>
+        </button> -->
+      </div>
+
+      <button mat-icon-button><mat-icon>filter_list</mat-icon></button>
+      <button mat-icon-button><mat-icon>view_list</mat-icon></button>
+      <button mat-icon-button><mat-icon>view_module</mat-icon></button>
+    </div>
+  </div>
+
+  <!-- Parent / Child Assets -->
+  <div class="automation-body">
+    <div class="parent-assets">
+      <h3>Parent Assets</h3>
+      <!-- TODO: Parent asset list -->
+      <button mat-raised-button color="primary">Add</button>
+    </div>
+
+    <div class="child-assets">
+      <h3>Child Assets</h3>
+      <!-- TODO: Child asset list -->
+    </div>
+  </div>
+</div>
