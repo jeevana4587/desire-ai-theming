@@ -1,0 +1,39 @@
+<div class="asset-card">
+  <!-- Header -->
+  <div class="asset-card-header">
+    <div>
+      <h3 class="title">{{ title }}</h3>
+      <p class="subtitle">{{ size }}</p>
+    </div>
+    <label>
+      <input
+        id="selectCheckbox"
+        type="checkbox"
+        [checked]="selected"
+        (change)="selected = !selected"
+      />
+      <span class="visually-hidden">Select asset</span>
+    </label>
+  </div>
+
+  <!-- Preview Image -->
+  <div class="asset-card-image" [style.background-image]="'url(' + imageUrl + ')'">
+    <p>Want cards, teddies, chocolates, hampers & more?</p>
+    <h3>Find the perfect <br> Valentine's gift!</h3>
+    <button mat-raised-button color="primary">Shop now</button>
+  </div>
+
+  <!-- Footer -->
+  <div class="asset-card-footer">
+    <label class="switch" for="automateToggle">
+      <input 
+        id="automateToggle"
+        type="checkbox"
+        [checked]="automate"
+        (change)="automate = !automate"
+      />
+      <span class="slider round"></span>
+    </label>
+    <span class="label">Automate</span>
+  </div>
+</div>

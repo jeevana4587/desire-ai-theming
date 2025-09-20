@@ -1,6 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
 @use '@angular/material' as mat;
 @use '_theme-colors' as my-theme;
+@font-face {
+  font-family: 'Gilroy';
+  src: url('assets/fonts/Gilroy-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('assets/fonts/Gilroy-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
 
 html {
   @include mat.theme((

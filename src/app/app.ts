@@ -8,6 +8,7 @@ import { MatCardModule } from '@angular/material/card';
 import {DatepickerComponent} from './datepicker/datepicker';
 import { ButtonComponent } from './button/button';
 import { CardComponent } from './card/card';
+import { AssetCardComponent } from './asset/asset-card/asset-card';
 
 
 @Component({
@@ -21,7 +22,8 @@ import { CardComponent } from './card/card';
     MatCardModule,
     DatepickerComponent,
     CardComponent,
-    ButtonComponent
+    ButtonComponent,
+    AssetCardComponent
     ],
 
   templateUrl: './app.html',
